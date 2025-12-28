@@ -12,7 +12,7 @@ AGGRESSIVE_THRESHOLD = 50
 MIN_SCAN_SECONDS = 5
 
 SELF_PID = os.getpid()
-EXCLUDE_PIDS = {0, 4, SELF_PID}  # Basic/system PIDs to ignore
+EXCLUDE_PIDS = {0, 4, SELF_PID}
 
 def has_visible_window(pid):
     def cb(hwnd, result):
@@ -268,3 +268,4 @@ info_icon.bind("<Button-1>", lambda e: show_info())
 tk.Label(app, text="Made by Kernel", bg=bg, fg="gray").place(x=10, y=575)
 
 app.mainloop()
+
